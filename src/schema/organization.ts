@@ -28,7 +28,8 @@ export const schema : JSONSchema6 = {
     		"Standards Development Organization",
     		"Startup",
     		"Supra National Government",
-    		"Trade Association"
+			"Trade Association",
+			"Sub Government"
     	]
     },
     "Parent Org": {
@@ -59,13 +60,17 @@ export const schema : JSONSchema6 = {
     	]
     },
     "Partners": {
-    	"type": "string"
-    },
-    "Me2B WG": {
-    	"type": "string"
-    },
+		"type": "array",
+		"maxItems": 5,
+		"items": {
+			"type": "string"
+			}
+	 },
     "Tags": {
-    	"type": "string"
+		"type": "array",
+		"items": {
+			"type": "string"
+			}
     },
     "Github Repo": {
     	"type": "string",
@@ -79,6 +84,15 @@ export const schema : JSONSchema6 = {
     	"type": "string",
     	"format": "date"
     },
+    "Sector": {
+    	"type": "string",
+    	"enum": [
+    		"non-profit",
+    		"for-profit",
+    		"government",
+    		"academic"
+    	]
+    },
     "Purpose": {
     	"type": "string",
     	"enum": [
@@ -90,16 +104,28 @@ export const schema : JSONSchema6 = {
     		"certification and compliance",
     		"transparency and accountability"
     	]
-    },
-    "Sector": {
-    	"type": "string",
+	},
+	"Digital Harms Addressed": {
+		"type": "string",
     	"enum": [
-    		"non-profit",
-    		"for-profit",
-    		"government",
-    		"academic"
-    	]
-    },
+			"AGGREGATION",
+			"APPROPRIATION",
+			"BLACKMAIL",
+			"BREACH OF CONFIDENTIALITY",
+			"DECISIONAL INTERFERENCE",
+			"DISCLOSURE",
+			"DISTORTION",
+			"EXCLUSION",
+			"EXPOSURE",
+			"IDENTIFICATION",
+			"INCREASED ACCESSIBILITY",
+			"INSECURITY",
+			"INTERROGATION",
+			"INTRUSION",
+			"SECONDARY USE",
+			"SURVEILLANCE"
+		]
+	},
     "Tech Focus": {
     	"type": "string",
     	"enum": [
@@ -147,6 +173,23 @@ export const schema : JSONSchema6 = {
     		"member",
     		"out of scope"
     	]
+	},
+	"Annual Budget": {
+    	"type": "string"
+	},
+	"Funding": {
+    	"type": "string"
+	},
+    "Me2B Relationship": {
+    	"type": "string",
+    	"enum": [
+    		"certification candidate or awardee",
+    		"collaborating org",
+    		"potential collaborator",
+    		"out of scope",
+    		"funder",
+    		"affiliates"
+    	]
     },
     "Scope": {
     	"type": "string",
@@ -162,7 +205,10 @@ export const schema : JSONSchema6 = {
     	"type": "string"
     },
     "Products and or services": {
-    	"type": "string"
+		"type": "array",
+		"items": {
+			"type": "string"
+		}
     },
     "Twitter Profile": {
     	"type": "string",
@@ -176,12 +222,8 @@ export const schema : JSONSchema6 = {
     	"type": "string",
     	"format": "url"
     },
-    "Frequency": {
-    	"type": "string"
-    },
     "Relevant Publications": {
     	"type": "string"
     }
-
   }
 }

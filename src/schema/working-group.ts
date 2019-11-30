@@ -11,49 +11,39 @@ export const schema : JSONSchema6 = {
   "properties" : {
     "Name" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Description" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "URL" : {
         "type": "string",
         "format":"url",
-        "title": "",
         "description": ""
     },
     "Category" : {
         "type": "string",
         "format":"url",
-        "title": "",
         "description": "",
         "enum": [
           "Discussion Group",
           "w/in SDO working on a formal standard",
-          "Community Group"
+          "Community Group",
+          "w/in (Inter)Government Organization",
+          "w/in a Trade Association"
         ]
     },
     "Parent Org" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "People" : {
         "type": "string",
-        "title": "",
-        "description": ""
-    },
-    "Github Repo" : {
-        "type": "string",
-        "title": "",
         "description": ""
     },
     "Meeting Frequency" : {
         "type": "string",
-        "title": "",
         "description": "",
         "enum": [
           "weekly",
@@ -67,70 +57,80 @@ export const schema : JSONSchema6 = {
     "Date Founded" : {
         "type": "string",
         "format": "date",
-        "title": "",
         "description": ""
     },
     "Date Ended" : {
         "type": "string",
         "format": "date",
-        "title": "",
         "description": ""
     },
-    "Purpose" : {
+    "Purpose": {
         "type": "string",
-        "title": "",
-        "description": "",
-    },
-    "Tech Focus" : {
-        "type": "string",
-        "title": "",
         "description": "",
         "enum": [
+            "education",
+            "human rights",
+            "usability",
+            "tech interoperability",
+            "governance",
+            "certification and compliance",
+            "transparancy and accountability"
         ]
+    },
+    "Digital Harms Addressed": {
+		"type": "string",
+    	"enum": [
+			"AGGREGATION",
+			"APPROPRIATION",
+			"BLACKMAIL",
+			"BREACH OF CONFIDENTIALITY",
+			"DECISIONAL INTERFERENCE",
+			"DISCLOSURE",
+			"DISTORTION",
+			"EXCLUSION",
+			"EXPOSURE",
+			"IDENTIFICATION",
+			"INCREASED ACCESSIBILITY",
+			"INSECURITY",
+			"INTERROGATION",
+			"INTRUSION",
+			"SECONDARY USE",
+			"SURVEILLANCE"
+		]
+	},
+    "Tech Focus": {
+    	"type": "string",
+    	"enum": [
+    		"Identity",
+    		"Data Mobility",
+    		"Terms Management",
+    		"Information Sharing Control",
+    		"Data Storage"
+    	]
     },
     "Activities" : {
         "type": "string",
-        "title": "",
         "description": "",
     },
     "Status" : {
         "type": "string",
-        "title": "",
         "description": "",
         "enum": [
           "active",
           "inactive"
         ]
     },
-    "Me2B Relationship" : {
-        "type": "string",
-        "title": "",
-        "description": "",
-    },
-    "Scope" : {
-        "type": "string",
-        "title": "",
-        "description": "",
-    },
-    "Location(s)" : {
-        "type": "string",
-        "title": "",
-        "description": "",
-    },
     "IPR" : {
         "type": "string",
-        "title": "",
         "description": "",
     },
     "Github Profile" : {
         "type": "string",
         "format": "url",
-        "title": "",
         "description": "",
     },
     "Relevant Standards" : {
         "type": "string",
-        "title": "",
         "description": "",
     }
   },

@@ -10,24 +10,20 @@ export const schema : JSONSchema6 = {
   "properties" : {
     "Name" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Description" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Website" : {
         "type": "string",
         "format":"url",
-        "title": "",
         "description": ""
     },
     "Category" : {
         "type": "string",
         "format":"url",
-        "title": "",
         "description": "",
         "enum": [
           "Size",
@@ -37,18 +33,15 @@ export const schema : JSONSchema6 = {
     },
     "Host Organization" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "People" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Audience" : {
         "type": "string",
         "format":"url",
-        "title": "",
         "description": "",
         "enum": [
           "C suite decision makers",
@@ -65,12 +58,20 @@ export const schema : JSONSchema6 = {
     },
     "Partners / Host Sponsor Venue" : {
         "type": "string",
-        "title": "",
         "description": ""
+    },
+    "Working Group" : {
+        "type": "string",
+        "description": ""
+    },
+    "Tags": {
+		"type": "array",
+		"items": {
+			"type": "string"
+			}
     },
     "Frequency" : {
         "type": "string",
-        "title": "",
         "description": "how often the event occurs",
         "enum": [
           "daily",
@@ -80,37 +81,25 @@ export const schema : JSONSchema6 = {
           "other"
         ]
     },
-    "Version or Edition" : {
-        "type": "string",
-        "title": "",
-        "description": ""
-    },
     "Date" : {
         "type": "string",
         "format": "date",
-        "title": "",
         "description": ""
     },
     "Location(s)": {
-        "type": "string",
-        "title": "",
-        "description": ""
-    },
-    "Twitter Profile": {
-        "type": "string",
-        "format": "url",
-        "title": "",
-        "description": ""
+        "type": "array",
+        "description": "",
+        "items": {
+            "type":"string"
+        }
     },
     "Github Profile": {
         "type": "string",
         "format": "url",
-        "title": "",
         "description": ""
     },
     "Relevant Publications" : {
         "type": "string",
-        "title": "",
         "description": "",
     }
   },

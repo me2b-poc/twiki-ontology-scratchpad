@@ -11,110 +11,161 @@ export const schema : JSONSchema6 = {
   "properties" : {
     "Name" : {
         "type": "string",
-        "title": "",
+
         "description": ""
     },
     "About" : {
         "type": "string",
-        "title": "",
+
         "description": ""
     },
     "URL" : {
         "type": "string",
         "format":"url",
-        "title": "",
+
         "description": ""
     },
     "Publication Type" : {
         "type": "string",
-        "format":"url",
-        "title": "",
         "description": "",
         "enum": [
-          "report",
-          "paper",
-          "news article",
-          "event summary or output",
-          "blog post",
-          "op ed",
-          "book",
-          "video",
-          "podcast",
-          "standard",
-          "terms of service",
-          "license",
-          "glossary",
-          "legal document",
-          "trust framework",
-          "journal",
-          "magazine"
+            "blog post",
+            "book",
+            "event summary or output",
+            "glossary",
+            "journal",
+            "legal document",
+            "license",
+            "magazine",
+            "news article",
+            "op ed",
+            "paper",
+            "podcast",
+            "report",
+            "standard",
+            "terms of service",
+            "Trust Framework", 
+            "video"
         ]
     },
-    "Parent Org" : {
+    "Sponsoring Org" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Author(s)/Editor(s)" : {
-        "type": "string",
-        "title": "",
-        "description": ""
+        "type": "array",
+
+        "description": "",
+        "items": {
+            "type": "string"
+        }
     },
     "Audience" : {
         "type": "string",
-        "format":"url",
-        "title": "",
         "description": "",
         "enum": [
+            "C suite decision makers",
+            "consumer technology vendors",
+            "enterprise technology vendors",
+            "general public",
+            "government workers",
+            "legislators",
+            "marginalized and disadvantage communities",
+            "product users",
+            "researchers"
         ]
     },
     "Sponsoring Organization" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Working Group" : {
         "type": "string",
-        "title": "",
         "description": ""
     },
     "Tags" : {
-        "type": "string",
-        "title": "",
-        "description": ""
-    },
-    "Github Repo" : {
-        "type": "string",
-        "title": "",
-        "description": ""
+        "type": "array",
+        "description": "",
+        "items": {
+            "type": "string"
+        }
     },
     "License" : {
         "type": "string",
-        "title": "",
+
         "description": ""
     },
-    "Volume Frequence" : {
+    "Volume Frequency" : {
         "type": "string",
-        "title": "",
+
         "description": ""
     },
     "Version or Edition" : {
         "type": "string",
-        "title": "",
+
         "description": ""
     },
     "Date" : {
         "type": "string",
         "format": "date",
-        "title": "",
         "description": ""
     },
     "Sector" : {
         "type": "string",
-        "title": "",
         "description": "",
         "enum": [
         ]
+    },
+    "Purpose": {
+        "type": "string",
+        "description": "",
+        "enum": [
+            "education",
+            "human rights",
+            "usability",
+            "tech interoperability",
+            "governance",
+            "certification and compliance",
+            "transparancy and accountability"
+        ]
+    },
+    "Digital Harms Addressed": {
+		"type": "string",
+    	"enum": [
+			"AGGREGATION",
+			"APPROPRIATION",
+			"BLACKMAIL",
+			"BREACH OF CONFIDENTIALITY",
+			"DECISIONAL INTERFERENCE",
+			"DISCLOSURE",
+			"DISTORTION",
+			"EXCLUSION",
+			"EXPOSURE",
+			"IDENTIFICATION",
+			"INCREASED ACCESSIBILITY",
+			"INSECURITY",
+			"INTERROGATION",
+			"INTRUSION",
+			"SECONDARY USE",
+			"SURVEILLANCE"
+		]
+	},
+    "Tech Focus": {
+    	"type": "string",
+    	"enum": [
+    		"Identity",
+    		"Data Mobility",
+    		"Terms Management",
+    		"Information Sharing Control",
+    		"Data Storage"
+    	]
+    },
+    "Jurisdiction": {
+    	"type": "string"
+    },
+    "Github Profile": {
+    	"type": "string",
+    	"format": "url"
     }
   },
 }
